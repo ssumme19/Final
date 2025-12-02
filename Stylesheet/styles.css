@@ -1,0 +1,635 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+
+/* Color Theme Swatches*/
+--grey-green: #85A6A6; 
+--blue-green: #22403A;
+--kinda-white: #F2F2F2; 
+--soft-green: #5D8C64; 
+--moss-green: #5F8C4A;
+
+
+}
+
+body{
+    width: 1280px;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    background-image: url(../images/AdobeStock_221786167.jpeg);
+    background-size: cover;
+    
+}
+
+
+header {
+    display:grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    background-color: var(--soft-green);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+header img{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: 1280px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+
+}
+
+h1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-family: "tuppence", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color:var(--blue-green);
+}
+
+h1 a {
+
+    text-decoration: none;
+    font-family: "tuppence", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color:var(--blue-green);
+
+}
+
+h1 a:focus {
+
+    color: var(--kinda-white);
+}
+
+h1 a:hover {
+
+    color: var(--kinda-white);
+}
+
+header nav {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: -1; 
+}
+
+nav ul {
+    list-style-type: none;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 30px auto;
+    position: relative;
+    top: 5px;
+    text-align: right;
+    padding-left: 100px;
+    
+    
+    
+    
+    
+}
+
+ul li a {
+    text-decoration: none;
+    margin: 0 auto;
+    color: var(--kinda-white);
+    font-family: "tuppence", sans-serif;
+    font-weight: lighter;
+    border-bottom: 3px solid var(--blue-green);
+    
+
+}
+
+ul li a:hover {
+
+    color: var(--blue-green);
+}
+
+ul li a:focus {
+    
+    color: var(--blue-green);
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,auto);
+    background-color: var(--kinda-white);
+    background-size: cover;
+    border-top: var(--soft-green) 7px solid;
+    border-left: var(--soft-green) 3px solid;
+    border-right: var(--soft-green) 3px solid;
+    margin: 0 auto;
+    height: 100%;
+}
+
+main h2 {
+    
+    font-family: "tuppence", sans-serif;
+    color: var(--blue-green);
+    font-weight: normal;
+    font-size: 30px;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+main>p {
+
+    font-family: "Blackest Text";
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color:var(--moss-green);
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    border-bottom: 3px solid var(--soft-green);
+    margin-top: 60px;
+    
+}
+
+.info1 {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info2 {
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.info1 h3 {
+
+    font-family: "tuppence", sans-serif;
+    color: var(--blue-green);
+    font-weight: normal;
+    font-size: 20px;
+    grid-column: 2;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: -150px;
+    margin-left: 80px;
+    text-align: center;
+    align-content: center;
+    
+
+}
+
+.info1 img {
+
+    grid-column: 1;
+    margin: 0 auto;
+    border: 3px solid var(--grey-green);
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+
+
+.info2 img {
+
+    grid-column: 1;
+    margin-left: 100px;
+    margin-top: 60px;
+    border: 3px solid var(--grey-green);
+    
+
+
+
+}
+
+.info2 h3 {
+    
+    font-family: "tuppence", sans-serif;
+    color: var(--blue-green);
+    font-weight: normal;
+    font-size: 20px;
+    grid-column: 2;
+    grid-row: 3;
+    margin: 0 auto;
+    margin-top: -550px;
+    margin-left: 95px;
+    text-align: justify;
+    align-content: center;
+    width: 350px;
+    padding-bottom: 20px;
+    
+
+
+}
+
+.info1 p {
+
+    font-family: "Blackest Text";
+    color: var(--moss-green);
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 auto;
+    border-top: 2px solid var(--soft-green);
+    border-bottom: 2px solid var(--soft-green);
+    margin-top: -250px;
+    margin-left: 65px;
+    padding: 20px;
+    grid-column: 2;
+    width: 350px;
+    height: 130px;
+
+
+}
+
+.info2 p {
+
+    font-family: "Blackest Text";
+    color: var(--moss-green);
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 auto;
+    border-top: 2px solid var(--soft-green);
+    border-bottom: 2px solid var(--soft-green);
+    margin-top: 180px;
+    margin-left: 65px;
+    padding: 20px;
+    grid-column: 2;
+    width: 350px;
+    height: 130px;
+
+
+}
+
+footer {
+
+    background-color: var(--soft-green);
+    background-size: auto;
+    font-family: "Blackest Text";
+    color: var(--blue-green);
+    font-weight: lighter;
+    font-size: 16px;
+    text-align: center;
+    padding: 40px;
+
+}
+
+.contact main {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.contact h2 {
+
+    grid-column: 1;
+    grid-row: 1;
+    font-family: "tuppence", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--blue-green);
+    text-align: left;
+    margin-left: 325px;
+
+
+
+}
+
+.contact p {
+
+    grid-column: 1;
+    grid-row: 1;
+    font-family: "Blackest Text";
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--moss-green);
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    width: 280px;
+    margin-left: 290px;
+    text-align: justify;
+    line-height: 20px;
+    border-top: 3px solid var(--soft-green);
+    border-bottom: 3px solid var(--soft-green);
+    
+}
+
+.contact h4 {
+
+    grid-column: 1;
+    grid-row: 1;
+    font-family: "Blackest Text";
+    font-size: 16px;
+    font-weight: normal;
+    color:red;
+    opacity: 60%;
+    text-align: center;
+    width: 280px;
+    margin-top: 165px;
+    margin-left: 335px;
+    text-align: justify;
+    line-height: 20px;
+    
+}
+
+
+
+
+.contact img {
+
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    margin-left: 250px;
+    border: 3px solid var(--moss-green);
+
+}
+
+.contact form {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    height:fit-content;
+    background-color: var(--grey-green);
+    text-align: left;
+    height: 435px;
+    width: 270px;
+    margin-bottom: 60px;
+    padding: 10px;
+    border: 3px var(--moss-green) solid;
+
+}
+
+
+form label {
+    
+    display: block;
+    font-family: "Blackest Text";
+    font-size: 16px;
+    color: var(--blue-green);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+
+
+}
+
+form input[type="text"],
+input[type="tel"],
+input[type="email"] {
+
+    border: 2px solid var(--moss-green);
+    box-shadow: 1px 1px 2px 1px var(--soft-green);
+    width: 262px;
+    cursor: pointer;
+}
+
+form input[type="text"]:focus {
+
+    background-color: var(--grey-green);
+}
+
+
+input[type="tel"]:focus {
+
+    background-color: var(--grey-green);
+}
+
+
+input[type="email"]:focus {
+
+    background-color: var(--grey-green);
+}
+
+
+textarea:focus {
+
+    background-color: var(--grey-green);
+}
+
+
+form input[type="text"]:hover{
+
+    border: solid var(--kinda-white);
+}
+
+
+input[type="tel"]:hover {
+
+    border: solid var(--kinda-white);
+}
+
+
+input[type="email"]:hover {
+
+    border: solid var(--kinda-white);
+
+}
+textarea:hover {
+
+    border: solid var(--kinda-white);
+}
+
+form fieldset {
+
+    border: 2px solid var(--moss-green);
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+form textarea {
+
+    border: 2px solid var(--moss-green);
+    box-shadow: 1px 1px 2px 1px var(--soft-green);
+    width: 262px;
+    height: 100px;
+    cursor: pointer;
+
+}
+
+form fieldset input[type="radio"]{
+
+    position: relative;
+    appearance: none;
+    display: block;
+    border-radius: 50%;;
+    height: 20px;
+    width: 20px;
+    background-color: var(--kinda-white);
+    border: 2px solid transparent;
+    margin: 0 auto;
+    margin-top: -10px;;
+    cursor: pointer;
+
+}
+
+form fieldset input[type="radio"]::before{
+
+    background-color: white;
+
+}
+
+
+form fieldset input[type="radio"]::after {
+
+    content: "";
+    border-radius: 50%;;
+    height: 10px;
+    width: 10px;
+    background-color: var(--moss-green);
+    margin: 0 auto;
+    top: 8.5px;
+    left: 8px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+
+
+}
+
+form fieldset input[type="radio"]:checked::after {
+
+    opacity: 1;
+}
+
+
+form fieldset input[type="radio"]:focus {
+
+    border: 2px solid var(--moss-green);
+
+    
+}
+
+form fieldset input[type="radio"]:hover {
+
+    border:  2px solid var(--moss-green);
+
+    
+}
+
+
+.radios {
+
+    display: flex;
+    margin: 0 auto;
+}
+
+.radios label {
+    
+    margin: 0 auto;
+    margin-top: -10px;
+    text-align: left;
+    margin-left: -150px;
+}
+
+form fieldset legend {
+
+    font-family: "Blackest Text";
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: var(--blue-green);
+    
+
+}
+
+
+form button[type= "submit"] {
+
+    background-color: var(--moss-green);
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 3px solid var(--moss-green);
+    cursor: pointer;
+    font-family: "Blackest Text";
+    color: var(--kinda-white);
+    height: 20px;
+    width: 60px;
+    box-shadow: 1px 1px 2px 1px var(--soft-green);
+    margin-left: 100px;
+
+}
+
+form button[type= "submit"]:focus {
+
+    background-color: var(--grey-green);
+}
+
+form button[type= "submit"]:hover {
+
+    border: 1px solid white;
+}
+
+
+
